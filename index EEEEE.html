@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Todo Webapp</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <header class="app-header">
+      <h1>Todo Webapp</h1>
+      <p class="muted">Simple offline Todo app built with HTML, CSS, and vanilla JS.</p>
+    </header>
+
+    <section class="todo-app">
+      <form id="todoForm" class="todo-form" aria-label="Add todo">
+        <input id="todoInput" placeholder="What needs to be done?" autocomplete="off" required />
+        <button type="submit" class="btn">Add</button>
+      </form>
+
+      <div class="todo-controls">
+        <div class="filters">
+          <button data-filter="all" class="filter active">All</button>
+          <button data-filter="active" class="filter">Active</button>
+          <button data-filter="completed" class="filter">Completed</button>
+        </div>
+        <button id="clearCompleted" class="btn muted">Clear completed</button>
+      </div>
+
+      <ul id="todoList" class="todo-list" aria-live="polite"></ul>
+    </section>
+
+    <footer class="site-footer">
+      <p class="muted">Tip: This app stores todos in your browser's localStorage.</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
